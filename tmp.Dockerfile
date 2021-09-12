@@ -15,7 +15,7 @@ RUN apt-get update -y && \
         curl \
         unzip \
         build-essential \
-        openjdk \
+        openjdk-8-jdk \
 	    openssh-client \
         gcc \
         git \
@@ -42,7 +42,7 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     ln -s /usr/bin/python3 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/*
-RUN npm install -g ajv-cli
+RUN npm install -g ajv-cli    
 RUN apt-get update && apt-get install -y python3-venv
 
 RUN rm /etc/apt/apt.conf.d/docker-clean
